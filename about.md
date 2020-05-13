@@ -10,6 +10,16 @@ layout: page
 ---
 This is the azimuth theme. You can find out more info about customizing your theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com)
 
+
+
+![Meeting room](/images/9.jpg "A typical meeting")
+
+```html
+<head>
+  <meta link=""/>
+</head>
+```
+
 You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
