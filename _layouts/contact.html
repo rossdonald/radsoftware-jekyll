@@ -4,37 +4,46 @@ layout: body
 
 <div class="outer">
   <div class="inner-medium">
-
     <article class="post page post-full">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-      </header><!-- .post-header -->
-      {% assign subtitle_is_not_empty = page.subtitle | is_not_empty %}
-      {% if subtitle_is_not_empty %}
+      </header>
+      <!-- .post-header -->
+      {% assign subtitle_is_not_empty = page.subtitle | is_not_empty %} {% if
+      subtitle_is_not_empty %}
       <div class="post-subtitle">
         {{ page.subtitle }}
-      </div><!-- .post-subtitle -->
-      {% endif %}
-      {% assign img_path_is_not_empty = page.img_path | is_not_empty %}
-      {% if img_path_is_not_empty %}
+      </div>
+      <!-- .post-subtitle -->
+      {% endif %} {% assign img_path_is_not_empty = page.img_path | is_not_empty
+      %} {% if img_path_is_not_empty %}
       <div class="post-thumbnail">
         <img src="{{ page.img_path | relative_url }}" alt="{{ page.title }}" />
-      </div><!-- .post-thumbnail -->
+      </div>
+      <!-- .post-thumbnail -->
       {% endif %}
       <div class="post-content">
         {{ content }}
-        <form name="contactForm" method="POST" netlify-honeypot="bot-field" data-netlify="true" id="contact-form"
-          class="contact-form">
+        <form
+          name="RAD-Contact-Form"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          id="radcontactform"
+          class="contact-form"
+        >
           <p class="screen-reader-text">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            <label
+              >Don't fill this out if you're human: <input name="bot-field"
+            /></label>
           </p>
           <p class="form-row">
             <label class="form-label">Name</label>
-            <input type="text" name="name" class="form-input">
+            <input type="text" name="name" class="form-input" />
           </p>
           <p class="form-row">
             <label class="form-label">Email address</label>
-            <input type="email" name="email" class="form-input">
+            <input type="email" name="email" class="form-input" />
           </p>
           <p class="form-row">
             <label class="form-label">Message</label>
@@ -44,9 +53,13 @@ layout: body
           <p class="form-row form-submit">
             <button type="submit" class="button">Send Message</button>
           </p>
-        </form><!-- .contact-form -->
-      </div><!-- .post-content -->
-    </article><!-- .post -->
-
-  </div><!-- .inner-medium -->
-</div><!-- .outer-->
+        </form>
+        <!-- .contact-form -->
+      </div>
+      <!-- .post-content -->
+    </article>
+    <!-- .post -->
+  </div>
+  <!-- .inner-medium -->
+</div>
+<!-- .outer-->

@@ -7,4 +7,4 @@ menus:
 layout: contact
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus. Cras lacinia, eros at dapibus molestie, risus tortor pretium ligula.
+Please contact us for a quote on your project or any enquiry about how we can help with your business software.

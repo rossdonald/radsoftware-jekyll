@@ -4,11 +4,10 @@ sections:
   - section_id: hero
     component: hero_block.html
     type: heroblock
-    image: images/hero.png
-    title: This Is A Big Hero Headline
+    image: images/crane.png
+    title: Custom Web Application Development
     content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site. 
+      Your business is unique, a custom developed application meets your needs without compromise.
     actions:
       - label: Learn More
         url: /features
@@ -55,7 +54,7 @@ sections:
     title: Testimonials
     subtitle: >-
       Aliquam malesuada ligula eget est fringilla blandit. Integer finibus
-      semper libero id sodales. 
+      semper libero id sodales.
     reviews:
       - author: John Doe
         avatar: images/review1.jpg

@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="urn:clr.config:REMOVE.THIS.ATTRIBUTE.BEFORE.RUNNING.YOUR.APPLICATION" xmlns="urn:clr.config:REMOVE.THIS.ATTRIBUTE.BEFORE.RUNNING.YOUR.APPLICATION" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense" elementFormDefault="qualified" attributeFormDefault="unqualified" vs:friendlyname=".NET Configuration File" vs:ishtmlschema="false" vs:iscasesensitive="true" vs:requireattributequotes="true" vs:defaultnamespacequalifier="" vs:defaultnsprefix="">
+	<!-- .NET CLR Configuration File Schema developed by Rad Software (http://www.radsoftware.com.au/) -->
+	<xs:annotation>
+		<xs:documentation>.NET Configuration File</xs:documentation>
+	</xs:annotation>
+	<xs:element name="configuration">
+		<xs:annotation>
+			<xs:documentation>.NET configuration file</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="configSections" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Configuration Sections</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="section" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string"/>
+									<xs:attribute name="type" type="xs:string"/>
+									<xs:attribute name="allowDefinition">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Everywhere"/>
+												<xs:enumeration value="MachineOnly"/>
+												<xs:enumeration value="MachineToApplication"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="allowLocation">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="sectionGroup" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="section" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+												<xs:attribute name="type" type="xs:string"/>
+												<xs:attribute name="allowDefinition">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Everywhere"/>
+															<xs:enumeration value="MachineOnly"/>
+															<xs:enumeration value="MachineToApplication"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="allowLocation">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="true"/>
+															<xs:enumeration value="false"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="name" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="remove" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="clear" minOccurs="0">
+								<xs:complexType/>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="appSettings" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Application settings</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="add" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="key" type="xs:string"/>
+									<xs:attribute name="value" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="remove" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="key" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="clear" minOccurs="0">
+								<xs:complexType/>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="file" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="system.diagnostics" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Trace and Debug Settings</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="assert" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="assertuienabled">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="logfilename" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="switches" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+												<xs:attribute name="value" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="trace" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="listeners" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="initializeData" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="remove" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="autoflush">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="indentsize" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="mscorlib" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Cryptography Settings </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="cryptographySettings" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="cryptoNameMapping" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="cryptoClasses" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="cryptoClass" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="customClassName" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="nameEntry" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+															<xs:attribute name="Class" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="oidMap" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="oidEntry" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="OID" type="xs:string"/>
+															<xs:attribute name="name" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="system.net" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Network Settings </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="authenticationModules" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="connectionManagement" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="address" type="xs:string"/>
+												<xs:attribute name="maxconnection" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="defaultProxy" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="proxy" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="usesystemdefault">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="false"/>
+															<xs:enumeration value="true"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="bypassonlocal">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="true"/>
+															<xs:enumeration value="false"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="proxyaddress" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="bypasslist" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="address" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="remove" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="clear" minOccurs="0">
+														<xs:complexType/>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="module" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="webRequestModules" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="prefix" type="xs:string"/>
+												<xs:attribute name="type" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="system.web" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>ASP.NET Settings</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="authentication" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="forms" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="credentials" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="user" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="name" type="xs:string"/>
+																		<xs:attribute name="password" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+															<xs:attribute name="passwordFormat">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Clear"/>
+																		<xs:enumeration value="SHA1"/>
+																		<xs:enumeration value="MD5"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+												<xs:attribute name="name" type="xs:string"/>
+												<xs:attribute name="loginUrl" type="xs:string"/>
+												<xs:attribute name="protection">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="All"/>
+															<xs:enumeration value="None"/>
+															<xs:enumeration value="Encryption"/>
+															<xs:enumeration value="Validation"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="timeout" type="xs:string"/>
+												<xs:attribute name="path" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="passport" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="redirectUrl" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="mode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Windows"/>
+												<xs:enumeration value="Forms"/>
+												<xs:enumeration value="Passport"/>
+												<xs:enumeration value="None"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="authorization" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="allow" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="users" type="xs:string"/>
+												<xs:attribute name="roles" type="xs:string"/>
+												<xs:attribute name="verbs" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="deny" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="users" type="xs:string"/>
+												<xs:attribute name="roles" type="xs:string"/>
+												<xs:attribute name="verbs" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="browserCaps" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="result" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="use" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="var" type="xs:string" default="HTTP_USER_AGENT"/>
+												<xs:attribute name="as" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="filter" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="case" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="match" type="xs:string"/>
+															<xs:attribute name="with" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="filter" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="case" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="match" type="xs:string"/>
+																		<xs:attribute name="with" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="filter" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="match" type="xs:string"/>
+																		<xs:attribute name="with" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+															<xs:attribute name="match" type="xs:string"/>
+															<xs:attribute name="with" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+												<xs:attribute name="match" type="xs:string"/>
+												<xs:attribute name="with" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="clientTarget" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="alias" type="xs:string"/>
+												<xs:attribute name="userAgent" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="alias" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="compilation" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="compilers" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="compiler" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="language" type="xs:string"/>
+															<xs:attribute name="extension" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="warningLevel" type="xs:string"/>
+															<xs:attribute name="compilerOptions" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="assemblies" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="assembly" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="remove" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="assembly" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="clear" minOccurs="0">
+														<xs:complexType/>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="debug">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="batch">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="batchTimeout" type="xs:string"/>
+									<xs:attribute name="defaultLanguage" type="xs:string"/>
+									<xs:attribute name="explicit">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="maxBatchSize" type="xs:string"/>
+									<xs:attribute name="maxBatchGeneratedFileSize" type="xs:string"/>
+									<xs:attribute name="numRecompilesBeforeAppRestart" type="xs:string"/>
+									<xs:attribute name="strict">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="tempDirectory" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="customErrors" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="error" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="statusCode" type="xs:string"/>
+												<xs:attribute name="redirect" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="defaultRedirect" type="xs:string"/>
+									<xs:attribute name="mode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="On"/>
+												<xs:enumeration value="Off"/>
+												<xs:enumeration value="RemoteOnly"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="globalization" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="requestEncoding" type="xs:string"/>
+									<xs:attribute name="responseEncoding" type="xs:string"/>
+									<xs:attribute name="fileEncoding" type="xs:string"/>
+									<xs:attribute name="culture" type="xs:string"/>
+									<xs:attribute name="uiCulture" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="httpHandlers" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="verb" type="xs:string"/>
+												<xs:attribute name="path" type="xs:string"/>
+												<xs:attribute name="type" type="xs:string"/>
+												<xs:attribute name="validate">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="true"/>
+															<xs:enumeration value="false"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="verb" type="xs:string"/>
+												<xs:attribute name="path" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="httpModules" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="add" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="type" type="xs:string"/>
+												<xs:attribute name="name" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="remove" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clear" minOccurs="0">
+											<xs:complexType/>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="httpRuntime" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="useFullyQualifiedRedirectUrl">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="maxRequestLength" type="xs:string"/>
+									<xs:attribute name="executionTimeout" type="xs:string"/>
+									<xs:attribute name="minFreeThreads" type="xs:string"/>
+									<xs:attribute name="minFreeLocalRequestFreeThreads" type="xs:string"/>
+									<xs:attribute name="appRequestQueueLimit" type="xs:string"/>
+									<xs:attribute name="versionHeader" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="identity" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="impersonate">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="userName" type="xs:string"/>
+									<xs:attribute name="password" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="machineKey" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="validationKey" type="xs:string"/>
+									<xs:attribute name="decryptionKey">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="AutoGenerate"/>
+												<xs:enumeration value="AutoGenerate,IsolateApps"/>
+												<xs:enumeration value="[keyvalue]"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="validation">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="SHA1"/>
+												<xs:enumeration value="MD5"/>
+												<xs:enumeration value="3DES"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="pages" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="buffer">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="enableSessionState">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+												<xs:enumeration value="ReadOnly"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="enableViewState">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="enableViewStateMac">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="autoEventWireup">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="smartNavigation">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="pageBaseType" type="xs:string"/>
+									<xs:attribute name="userControlBaseType" type="xs:string"/>
+									<xs:attribute name="validateRequest">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="False"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="processModel" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="enable">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="timeout">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="idleTimeout">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="shutdownTimeout">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="requestLimit">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="requestQueueLimit">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="num"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="restartQueueLimit">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="num"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="memoryLimit" type="xs:string"/>
+									<xs:attribute name="cpuMask" type="xs:string"/>
+									<xs:attribute name="webGarden">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="userName" type="xs:string"/>
+									<xs:attribute name="password" type="xs:string"/>
+									<xs:attribute name="logLevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="All"/>
+												<xs:enumeration value="None"/>
+												<xs:enumeration value="Errors"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="clientConnectedCheck">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="responseDeadlockInterval">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="responseRestartDeadlockInterval">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="hrs:mins:secs"/>
+												<xs:enumeration value="Infinite"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="comAuthenticationLevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Default"/>
+												<xs:enumeration value="None"/>
+												<xs:enumeration value="Connect"/>
+												<xs:enumeration value="Call"/>
+												<xs:enumeration value="Pkt"/>
+												<xs:enumeration value="PktIntegrity"/>
+												<xs:enumeration value="PktPrivacy"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="comImpersonationLevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Default"/>
+												<xs:enumeration value="Anonymous"/>
+												<xs:enumeration value="Identify"/>
+												<xs:enumeration value="Impersonate"/>
+												<xs:enumeration value="Delegate"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="maxWorkerThreads" type="xs:string"/>
+									<xs:attribute name="maxIoThreads" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="securityPolicy" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="trustLevel" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="name">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Full"/>
+															<xs:enumeration value="High"/>
+															<xs:enumeration value="Medium"/>
+															<xs:enumeration value="Low"/>
+															<xs:enumeration value="Minimal"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="policyFile" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="sessionState" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="mode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Off"/>
+												<xs:enumeration value="InProc"/>
+												<xs:enumeration value="StateServer"/>
+												<xs:enumeration value="SQLServer"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="cookieless">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="timeout" type="xs:string"/>
+									<xs:attribute name="stateConnectionString" type="xs:string"/>
+									<xs:attribute name="sqlConnectionString" type="xs:string"/>
+									<xs:attribute name="stateNetworkTimeout" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="trace" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="enabled">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="localOnly">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="pageOutput">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="requestLimit" type="xs:string"/>
+									<xs:attribute name="traceMode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="SortByTime"/>
+												<xs:enumeration value="SortByCategory"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="trust" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="level">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Full"/>
+												<xs:enumeration value="High"/>
+												<xs:enumeration value="Medium"/>
+												<xs:enumeration value="Low"/>
+												<xs:enumeration value="Minimal"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="originUrl" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="webServices" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="protocols" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="remove" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="clear" minOccurs="0">
+														<xs:complexType/>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="serviceDescriptionFormatExtensionTypes" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="soapExtensionTypes" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="priority" type="xs:string"/>
+															<xs:attribute name="group">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="0"/>
+																		<xs:enumeration value="1"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="soapExtensionReflectorTypes" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="priority" type="xs:string"/>
+															<xs:attribute name="group">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="0"/>
+																		<xs:enumeration value="1"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="soapExtensionImporterTypes" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="add" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="priority" type="xs:string"/>
+															<xs:attribute name="group">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="0"/>
+																		<xs:enumeration value="1"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="wsdlHelpGenerator" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="href" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="startup" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="requiredRuntime" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="version" type="xs:string"/>
+									<xs:attribute name="safemode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="supportedRuntime" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="version" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="runtime" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="developmentMode" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="developerInstallation">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true "/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="assemblyBinding" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="dependentAssembly" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="assemblyIdentity" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="name" type="xs:string"/>
+															<xs:attribute name="publicKeyToken" type="xs:string"/>
+															<xs:attribute name="culture" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="codeBase" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="href" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="bindingRedirect" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="oldVersion" type="xs:string"/>
+															<xs:attribute name="newVersion" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="publisherPolicy" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="apply">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="yes"/>
+																		<xs:enumeration value="no"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="probing" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="privatePath" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="publisherPolicy" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="apply">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="yes"/>
+															<xs:enumeration value="no"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="qualifyAssembly" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="partialName" type="xs:string"/>
+												<xs:attribute name="fullName" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="appliesTo" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="gcConcurrent" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="enabled">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="system.runtime.remoting" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="application" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="lifetime" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="leaseTime" type="xs:string"/>
+												<xs:attribute name="sponsorshipTimeout" type="xs:string"/>
+												<xs:attribute name="renewOnCallTime" type="xs:string"/>
+												<xs:attribute name="leaseManagerPollTime" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="channels" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="channel" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="serverProviders" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice>
+																			<xs:element name="formatter" minOccurs="0">
+																				<xs:complexType>
+																					<xs:attribute name="ref" type="xs:string"/>
+																					<xs:attribute name="type" type="xs:string"/>
+																					<xs:attribute name="customFormatterProperty" type="xs:string"/>
+																					<xs:attribute name="includeVersions" type="xs:string"/>
+																					<xs:attribute name="strictBinding" type="xs:string"/>
+																					<xs:attribute name="typeFilterLevel">
+																						<xs:simpleType>
+																							<xs:restriction base="xs:string">
+																								<xs:enumeration value="Low "/>
+																								<xs:enumeration value="High"/>
+																							</xs:restriction>
+																						</xs:simpleType>
+																					</xs:attribute>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="provider" minOccurs="0">
+																				<xs:complexType>
+																					<xs:attribute name="ref" type="xs:string"/>
+																					<xs:attribute name="type" type="xs:string"/>
+																					<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="clientProviders" minOccurs="0">
+																	<xs:complexType>
+																		<xs:choice>
+																			<xs:element name="formatter" minOccurs="0">
+																				<xs:complexType>
+																					<xs:attribute name="ref" type="xs:string"/>
+																					<xs:attribute name="type" type="xs:string"/>
+																					<xs:attribute name="customFormatterProperty" type="xs:string"/>
+																					<xs:attribute name="includeVersions" type="xs:string"/>
+																					<xs:attribute name="strictBinding" type="xs:string"/>
+																					<xs:attribute name="typeFilterLevel">
+																						<xs:simpleType>
+																							<xs:restriction base="xs:string">
+																								<xs:enumeration value="Low "/>
+																								<xs:enumeration value="High"/>
+																							</xs:restriction>
+																						</xs:simpleType>
+																					</xs:attribute>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="provider" minOccurs="0">
+																				<xs:complexType>
+																					<xs:attribute name="ref" type="xs:string"/>
+																					<xs:attribute name="type" type="xs:string"/>
+																					<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:choice>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="ref" type="xs:string"/>
+															<xs:attribute name="displayName" type="xs:string"/>
+															<xs:attribute name="port" type="xs:string"/>
+															<xs:attribute name="customChannelProperty" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="service" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="wellknown" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="mode">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Singleton"/>
+																		<xs:enumeration value="SingleCall"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="displayName" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="objectUri" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="activated" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="client" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="wellknown" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="url" type="xs:string"/>
+															<xs:attribute name="displayName" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="activated" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+												<xs:attribute name="url" type="xs:string"/>
+												<xs:attribute name="displayName" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="soapInterop" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="interopXmlType" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="clr" type="xs:string"/>
+															<xs:attribute name="xml" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="interopXmlElement" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="clr" type="xs:string"/>
+															<xs:attribute name="xml" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="preLoad" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="assembly" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+									<xs:attribute name="name" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="channels" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="channel" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="serverProviders" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="formatter" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="ref" type="xs:string"/>
+																		<xs:attribute name="type" type="xs:string"/>
+																		<xs:attribute name="customFormatterProperty" type="xs:string"/>
+																		<xs:attribute name="includeVersions" type="xs:string"/>
+																		<xs:attribute name="strictBinding" type="xs:string"/>
+																		<xs:attribute name="typeFilterLevel">
+																			<xs:simpleType>
+																				<xs:restriction base="xs:string">
+																					<xs:enumeration value="Low "/>
+																					<xs:enumeration value="High"/>
+																				</xs:restriction>
+																			</xs:simpleType>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="provider" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="ref" type="xs:string"/>
+																		<xs:attribute name="type" type="xs:string"/>
+																		<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="clientProviders" minOccurs="0">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="formatter" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="ref" type="xs:string"/>
+																		<xs:attribute name="type" type="xs:string"/>
+																		<xs:attribute name="customFormatterProperty" type="xs:string"/>
+																		<xs:attribute name="includeVersions" type="xs:string"/>
+																		<xs:attribute name="strictBinding" type="xs:string"/>
+																		<xs:attribute name="typeFilterLevel">
+																			<xs:simpleType>
+																				<xs:restriction base="xs:string">
+																					<xs:enumeration value="Low "/>
+																					<xs:enumeration value="High"/>
+																				</xs:restriction>
+																			</xs:simpleType>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="provider" minOccurs="0">
+																	<xs:complexType>
+																		<xs:attribute name="ref" type="xs:string"/>
+																		<xs:attribute name="type" type="xs:string"/>
+																		<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+												<xs:attribute name="id" type="xs:string"/>
+												<xs:attribute name="type" type="xs:string"/>
+												<xs:attribute name="displayName" type="xs:string"/>
+												<xs:attribute name="customChannelProperty" type="xs:string"/>
+												<xs:attribute name="delayLoadAsClientChannel">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="true"/>
+															<xs:enumeration value="false"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="channelSinkProviders" minOccurs="0">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="serverProviders" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="formatter" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="ref" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="customFormatterProperty" type="xs:string"/>
+															<xs:attribute name="includeVersions" type="xs:string"/>
+															<xs:attribute name="strictBinding" type="xs:string"/>
+															<xs:attribute name="typeFilterLevel">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Low "/>
+																		<xs:enumeration value="High"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="provider" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="ref" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="clientProviders" minOccurs="0">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="formatter" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="ref" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="customFormatterProperty" type="xs:string"/>
+															<xs:attribute name="includeVersions" type="xs:string"/>
+															<xs:attribute name="strictBinding" type="xs:string"/>
+															<xs:attribute name="typeFilterLevel">
+																<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																		<xs:enumeration value="Low "/>
+																		<xs:enumeration value="High"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="provider" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="ref" type="xs:string"/>
+															<xs:attribute name="type" type="xs:string"/>
+															<xs:attribute name="customChannelSinkProperty" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="customErrors" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="mode">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="off"/>
+												<xs:enumeration value="on"/>
+												<xs:enumeration value="remoteOnly"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="debug" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="loadTypes">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true"/>
+												<xs:enumeration value="false"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

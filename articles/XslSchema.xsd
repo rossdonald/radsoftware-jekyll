@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/XSL/Transform" xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense" elementFormDefault="qualified" vs:friendlyname="http://www.w3.org/1999/XSL/Transform" vs:ishtmlschema="false" vs:iscasesensitive="true" vs:requireattributequotes="false" vs:defaultnamespacequalifier="xsl" vs:defaultnsprefix="xsl">
+	<xsd:annotation>
+		<xsd:documentation>XSL</xsd:documentation>
+	</xsd:annotation>
+	<!--XSL Visual Studio Intellisense developed by Rad Software (http://www.radsoftware.com.au/) -->
+	<xsd:element name="stylesheet" type="stylesheetType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>stylesheet</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="stylesheetType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="template"/>
+			<xsd:element ref="param"/>
+			<xsd:element ref="import"/>
+			<xsd:element ref="include"/>
+			<xsd:element ref="attribute-set"/>
+			<xsd:element ref="decimal-format"/>
+			<xsd:element ref="namespace-alias"/>
+			<xsd:element ref="output"/>
+			<xsd:element ref="preserve-space"/>
+			<xsd:element ref="strip-space"/>
+			<xsd:element ref="key"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="extension-element-prefixes" type="xsd:string"/>
+		<xsd:attribute name="exclude-result-prefixes" type="xsd:string"/>
+		<xsd:attribute name="version" type="xsd:string" use="optional" default="1.0"/>
+	</xsd:complexType>
+	<!--apply-imports -->
+	<xsd:element name="apply-imports" type="apply-importsType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>apply-imports</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="apply-importsType"/>
+	<!--apply-templates -->
+	<xsd:element name="apply-templates" type="apply-templatesType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>apply-templates</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="apply-templatesType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="sort"/>
+			<xsd:element ref="with-param"/>
+		</xsd:choice>
+		<xsd:attribute name="select" type="xsd:string" use="optional"/>
+		<xsd:attribute name="mode" type="xsd:QName" use="optional"/>
+	</xsd:complexType>
+	<!--attribute -->
+	<xsd:element name="attribute" type="attributeType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>attribute</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="attributeType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-imports"/>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="number"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="namespace" type="xsd:anyURI"/>
+	</xsd:complexType>
+	<!--attribute-set -->
+	<xsd:element name="attribute-set" type="attribute-setType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>attribute-set</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="attribute-setType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="attribute"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:QName"/>
+		<xsd:attribute name="use-attribute-sets" type="xsd:QName"/>
+	</xsd:complexType>
+	<!--call-template -->
+	<xsd:element name="call-template" type="call-templateType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>call-template</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="call-templateType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="with-param"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<!--comment -->
+	<xsd:element name="comment" type="commentType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>comment</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="commentType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-imports"/>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="number"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--choose -->
+	<xsd:element name="choose" type="chooseType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>choose</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="chooseType">
+		<xsd:choice>
+			<xsd:element ref="when"/>
+			<xsd:element ref="otherwise"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--copy -->
+	<xsd:element name="copy" type="copyType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>copy</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="copyType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="use-attribute-sets" type="xsd:string"/>
+	</xsd:complexType>
+	<!--copy-of -->
+	<xsd:element name="copy-of" type="copy-ofType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>copy-of</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="copy-ofType">
+		<xsd:attribute name="select" type="xsd:string"/>
+	</xsd:complexType>
+	<!--decimal-format -->
+	<xsd:element name="decimal-format" type="decimal-formatType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>decimal-format</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="decimal-formatType">
+		<xsd:attribute name="name" type="xsd:QName"/>
+		<xsd:attribute name="decimal-separator" type="xsd:string"/>
+		<xsd:attribute name="grouping-separator" type="xsd:string"/>
+		<xsd:attribute name="infinity" type="xsd:string"/>
+		<xsd:attribute name="minus-sign" type="xsd:string"/>
+		<xsd:attribute name="NaN" type="xsd:string"/>
+		<xsd:attribute name="percent" type="xsd:string"/>
+		<xsd:attribute name="per-mille" type="xsd:string"/>
+		<xsd:attribute name="zero-digit" type="xsd:string"/>
+		<xsd:attribute name="digit" type="xsd:string"/>
+		<xsd:attribute name="pattern-separator" type="xsd:string"/>
+	</xsd:complexType>
+	<!--element -->
+	<xsd:element name="element" type="elementType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>element</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="elementType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="namespace" type="xsd:string"/>
+		<xsd:attribute name="use-attribute-sets" type="xsd:string"/>
+	</xsd:complexType>
+	<!--fallback -->
+	<xsd:element name="fallback" type="fallbackType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>fallback</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="fallbackType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--for-each -->
+	<xsd:element name="for-each" type="for-eachType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>for-each</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="for-eachType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-imports"/>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="number"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="sort"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="select" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<!--if -->
+	<xsd:element name="if" type="ifType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>if</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ifType" vs:blockformatted="true">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="test" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<!--import -->
+	<xsd:element name="import" type="importType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>import</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="importType">
+		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
+	</xsd:complexType>
+	<!--include -->
+	<xsd:element name="include" type="includeType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>include</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="includeType">
+		<xsd:attribute name="href" type="xsd:anyURI" use="required"/>
+	</xsd:complexType>
+	<!--key -->
+	<xsd:element name="key" type="keyType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>key</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="keyType">
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="match" type="xsd:string"/>
+		<xsd:attribute name="use" type="xsd:string"/>
+	</xsd:complexType>
+	<!--message -->
+	<xsd:element name="message" type="messageType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>message</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="messageType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="terminate">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="no"/>
+					<xsd:enumeration value="yes"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--namespace-alias -->
+	<xsd:element name="namespace-alias" type="namespace-aliasType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>namespace-alias</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="namespace-aliasType">
+		<xsd:attribute name="stylesheet-prefix" type="xsd:string"/>
+		<xsd:attribute name="result-prefix" type="xsd:string"/>
+	</xsd:complexType>
+	<!--number -->
+	<xsd:element name="number" type="numberType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="numberType">
+		<xsd:attribute name="level">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="single"/>
+					<xsd:enumeration value="multiple"/>
+					<xsd:enumeration value="any"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="count" type="xsd:string"/>
+		<xsd:attribute name="from" type="xsd:string"/>
+		<xsd:attribute name="value" type="xsd:string"/>
+		<xsd:attribute name="format" type="xsd:string"/>
+		<xsd:attribute name="lang" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="letter-value">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="alphabetic"/>
+					<xsd:enumeration value="traditional"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="grouping-separator" type="xsd:string"/>
+		<xsd:attribute name="grouping-size" type="xsd:integer"/>
+	</xsd:complexType>
+	<!--output -->
+	<xsd:element name="output" type="outputType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>output</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="outputType">
+		<xsd:attribute name="method">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="xml"/>
+					<xsd:enumeration value="html"/>
+					<xsd:enumeration value="text"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="version" type="xsd:string"/>
+		<xsd:attribute name="encoding" type="xsd:string"/>
+		<xsd:attribute name="omit-xml-declaration">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="yes"/>
+					<xsd:enumeration value="no"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="standalone">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="yes"/>
+					<xsd:enumeration value="no"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="doctype-public" type="xsd:string"/>
+		<xsd:attribute name="doctype-system" type="xsd:string"/>
+		<xsd:attribute name="cdata-section-elements" type="xsd:string"/>
+		<xsd:attribute name="indent">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="yes"/>
+					<xsd:enumeration value="no"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="media-type" type="xsd:integer"/>
+	</xsd:complexType>
+	<!--otherwise -->
+	<xsd:element name="otherwise" type="otherwiseType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>otherwise</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="otherwiseType">
+		<xsd:choice>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<!--param -->
+	<xsd:element name="param" type="paramType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>param</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="paramType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="name-selectType"/>
+	</xsd:complexType>
+	<!--preserve-space -->
+	<xsd:element name="preserve-space" type="preserve-spaceType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>preserve-space</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="preserve-spaceType">
+		<xsd:attribute name="elements" type="xsd:NMTOKENS"/>
+	</xsd:complexType>
+	<!--processing-instruction -->
+	<xsd:element name="processing-instruction" type="processing-instructionType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>processing-instruction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="processing-instructionType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-imports"/>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="number"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string"/>
+	</xsd:complexType>
+	<!--sort -->
+	<xsd:element name="sort" type="sortType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>sort</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="sortType">
+		<xsd:attribute name="select" type="xsd:string"/>
+		<xsd:attribute name="lang" type="xsd:string"/>
+		<xsd:attribute name="data-type" vs:noambientcontentmodel="true">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="text"/>
+					<xsd:enumeration value="number"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="order">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="ascending"/>
+					<xsd:enumeration value="descending"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="case-order">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="upper-first"/>
+					<xsd:enumeration value="lower-first"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<!--strip-space -->
+	<xsd:element name="strip-space" type="strip-spaceType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>strip-space</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="strip-spaceType">
+		<xsd:attribute name="elements" type="xsd:string"/>
+	</xsd:complexType>
+	<!--template -->
+	<xsd:element name="template" type="templateType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>template</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="templateType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-imports"/>
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="number"/>
+			<xsd:element ref="param"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="match" type="xsd:string"/>
+		<xsd:attribute name="priority" type="xsd:decimal"/>
+		<xsd:attribute name="mode" type="xsd:string"/>
+	</xsd:complexType>
+	<!--text -->
+	<xsd:element name="text" type="textType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="textType">
+		<xsd:attributeGroup ref="disable-output-escapingType"/>
+	</xsd:complexType>
+	<!--transform -->
+	<xsd:element name="transform" type="transformType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>transform</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="transformType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="attribute-set"/>
+			<xsd:element ref="import"/>
+			<xsd:element ref="include"/>
+			<xsd:element ref="output"/>
+			<xsd:element ref="param"/>
+			<xsd:element ref="template"/>
+			<xsd:element ref="variable"/>
+			<xsd:element ref="strip-space"/>
+			<xsd:element ref="decimal-format"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="extension-element-prefixes" type="xsd:string"/>
+		<xsd:attribute name="exclude-result-prefixes" type="xsd:string"/>
+		<xsd:attribute name="version" type="xsd:string"/>
+	</xsd:complexType>
+	<!--variable -->
+	<xsd:element name="variable" type="variableType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>variable</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="variableType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="name-selectType"/>
+	</xsd:complexType>
+	<!--value-of -->
+	<xsd:element name="value-of" type="value-ofType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>value-of</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="value-ofType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="fallback"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="message"/>
+			<xsd:element ref="otherwise"/>
+			<xsd:element ref="param"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="template"/>
+			<xsd:element ref="variable"/>
+			<xsd:element ref="when"/>
+			<xsd:element ref="with-param"/>
+		</xsd:choice>
+		<xsd:attribute name="select" type="xsd:string" use="required"/>
+		<xsd:attributeGroup ref="disable-output-escapingType"/>
+	</xsd:complexType>
+	<!--when -->
+	<xsd:element name="when" type="whenType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>when</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="whenType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+			<xsd:element ref="text"/>
+		</xsd:choice>
+		<xsd:attribute name="test" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<!--with-param -->
+	<xsd:element name="with-param" type="with-paramType" vs:noambientcontentmodel="true">
+		<xsd:annotation>
+			<xsd:documentation>with-param</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="with-paramType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="apply-templates"/>
+			<xsd:element ref="attribute"/>
+			<xsd:element ref="call-template"/>
+			<xsd:element ref="choose"/>
+			<xsd:element ref="comment"/>
+			<xsd:element ref="copy"/>
+			<xsd:element ref="copy-of"/>
+			<xsd:element ref="element"/>
+			<xsd:element ref="for-each"/>
+			<xsd:element ref="if"/>
+			<xsd:element ref="processing-instruction"/>
+			<xsd:element ref="text"/>
+			<xsd:element ref="value-of"/>
+			<xsd:element ref="variable"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="name-selectType"/>
+	</xsd:complexType>
+	<!--ATTRIBUTE GROUPS-->
+	<xsd:attributeGroup name="name-selectType" vs:noambientcontentmodel="true">
+		<xsd:attribute name="name" type="xsd:QName" use="required"/>
+		<xsd:attribute name="select" type="xsd:string"/>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup name="disable-output-escapingType">
+		<xsd:attribute name="disable-output-escaping" use="optional" default="no">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="no"/>
+					<xsd:enumeration value="yes"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:attributeGroup>
+</xsd:schema>

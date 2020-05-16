@@ -1,0 +1,30 @@
+
+.NET Configuration File Schema for intellisense in Visual Studio .NET
+
+Developed by Rad Software - http://www.radsoftware.com.au
+
+How to install
+==============
+
+For Visual Studio .NET 2002 
+---------------------------
+
+unzip the contents of the zip file into
+
+C:\Program Files\Microsoft Visual Studio .NET\Common7\Packages\schemas\xml
+
+(or the appropriate location if you have an non-default installation) 
+
+
+For Visual Studio .NET 2003 
+---------------------------
+
+unzip the contents of the zip file into
+
+C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml
+
+(or the appropriate location if you have an non-default installation) 
+
+
+If you have find any corrections or updates, let me know via email (ross@radsoftware.com.au).
+
