@@ -1,0 +1,46 @@
+# 301 (default): Permanent redirect.
+# 302: Temporary redirect.
+# 404: Not found
+
+[[redirects]]
+  from = "/articles/default.aspx"
+  to = "/"
+  status = 404
+  force = false
+  query = {path = ":path"}
+[[redirects]]
+  from = "/articles/dataaccesslayerdesign1.aspx"
+  to = "/"
+  status = 404
+  force = false
+  query = {path = ":path"}
+[[redirects]]
+  from = "/articles/google-pagerank.aspx"
+  to = "/"
+  status = 404
+  force = false
+  query = {path = ":path"}  
+[[redirects]]
+  from = "/web/CodeZone/Articles/ClipboardMonitor.aspx"
+  to = "/articles/clipboardmonitor.aspx/"
+  status = 301
+  force = false
+  query = {path = ":path"}  
+[[redirects]]
+  from = "/nextgeneration/*"
+  to = "/codegenerator/"
+  status = 301
+  force = false
+  query = {path = ":path"}  
+[[redirects]]
+  from = "/codegenerator/*"
+  to = "/codegenerator/"
+  status = 301
+  force = false
+  query = {path = ":path"}  
+[[redirects]]
+  from = "/web/Products/RegexDesigner/Default.aspx"
+  to = "/regexdesigner/"
+  status = 301
+  force = false
+  query = {path = ":path"}  

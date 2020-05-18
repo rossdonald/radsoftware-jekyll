@@ -12,8 +12,6 @@ This is the azimuth theme. You can find out more info about customizing your the
 
 
 
-![Meeting room](/images/9.jpg "A typical meeting")
-
 ```html
 <head>
   <meta link=""/>

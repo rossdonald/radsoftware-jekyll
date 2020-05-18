@@ -25,16 +25,16 @@ layout: body
       <div class="post-content">
         {{ content }}
         <form
-          name="RAD-Contact-Form"
+          name="contact-form"
           method="POST"
-          netlify-honeypot="bot-field"
+          netlify-honeypot="subject-field"
           data-netlify="true"
-          id="radcontactform"
-          class="contact-form"
+          id="contactform"
+          class="RAD-contact-form"
         >
           <p class="screen-reader-text">
             <label
-              >Don't fill this out if you're human: <input name="bot-field"
+              >Don't fill this out if you're human: <input name="subject-field"
             /></label>
           </p>
           <p class="form-row">
@@ -49,7 +49,7 @@ layout: body
             <label class="form-label">Message</label>
             <textarea name="message" class="form-textarea" rows="7"></textarea>
           </p>
-          <input type="hidden" name="form-name" value="contactForm" />
+          <input type="hidden" name="form-name" value="RAD Contact Form" />
           <p class="form-row form-submit">
             <button type="submit" class="button">Send Message</button>
           </p>
