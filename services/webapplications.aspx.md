@@ -64,7 +64,7 @@ layout: page
 </p>
 <p>
   For more information on web application development, please
-  <a href="../../contact"> contact us</a>.
+  <a href="/contact"> contact us</a>.
 </p>
 <h2>ASP.NET - Technical Information</h2>
 
@@ -82,6 +82,6 @@ layout: page
   with fewer programming errors.
 </p>
 <p>
-  <a href="../../contact">Contact Us</a> |
+  <a href="/contact">Contact Us</a> |
   <a href="../officeautomation.aspx">Microsoft Office Solutions &gt;&gt;</a>
 </p>

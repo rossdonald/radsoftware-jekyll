@@ -100,6 +100,6 @@ layout: page
 
 
 <p>
-  Use the <a href="../../contact">contact page</a>
+  Use the <a href="/contact">contact page</a>
   to inquire about getting your project started today.
 </p>

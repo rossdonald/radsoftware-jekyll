@@ -26,5 +26,5 @@ layout: page
   gets a system up and running quickly.
 </p>
 <p>
-  <a href="../../contact">Contact Page &gt;&gt;</a>
+  <a href="/contact">Contact Page &gt;&gt;</a>
 </p>

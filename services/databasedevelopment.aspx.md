@@ -54,6 +54,6 @@ layout: page
 </p>
 
 <p>
-  <a href="../../contact">Contact Us</a> |
+  <a href="/contact">Contact Us</a> |
   <a href="../webapplications.aspx">Web Application Development &gt;&gt;</a>
 </p>

@@ -25,6 +25,6 @@ layout: page
   Word and Visual Basic Add-In Programs for Microsoft Outlook.
 </p>
 <p>
-  <a href="../../contact">Contact Us</a> |
+  <a href="/contact">Contact Us</a> |
   <a href="../developmentapproach.aspx">Development Approach &gt;&gt;</a>
 </p>

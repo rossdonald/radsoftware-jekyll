@@ -79,7 +79,7 @@ layout: page
   for your systems.
 </p>
 <p>
-  <a href="../contact/">Contact Us</a> | <a
+  <a href="/contact/">Contact Us</a> | <a
     href="../databasedevelopment.aspx/"
     >Database Development &gt;&gt;</a
   >
