@@ -1,25 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      {% assign title_is_not_empty = page.title | is_not_empty %} {% if
-      title_is_not_empty %}{{ page.title }} - {% endif %}{{ site.title }}
-    </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google" content="notranslate" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" />
-    <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
-  </head>
-  <body>
-    {{ content }}
 
-    <script src="{{ 'assets/js/plugins.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/init.js' | relative_url }}"></script>
-    <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
-  </body>
+<head>
+      <title>
+            {% assign title_is_not_empty = page.title | is_not_empty %} {% if
+      title_is_not_empty %}{{ page.title }} - {% endif %}{{ site.title }}
+      </title>
+      <meta charset="utf-8" />
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+      <meta name="google"
+            content="notranslate" />
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i"
+            rel="stylesheet" />
+      <link rel="stylesheet"
+            href="{{ 'assets/css/main.css' | relative_url }}" />
+      <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+
+      <link rel="manifest"
+            href="/images/appicon/manifest.json">
+      <link rel="apple-touch-icon"
+            sizes="57x57"
+            href="/images/appicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon"
+            sizes="60x60"
+            href="/images/appicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon"
+            sizes="72x72"
+            href="/images/appicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon"
+            sizes="76x76"
+            href="/images/appicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon"
+            sizes="114x114"
+            href="/images/appicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon"
+            sizes="120x120"
+            href="/images/appicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon"
+            sizes="144x144"
+            href="/images/appicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon"
+            sizes="152x152"
+            href="/images/appicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/appicon/apple-icon-180x180.png">
+      <link rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/images/appicon/android-icon-192x192.png">
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/appicon/favicon-32x32.png">
+      <link rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/images/appicon/favicon-96x96.png">
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/appicon/favicon-16x16.png">
+      <meta name="msapplication-TileColor"
+            content="#ffffff">
+      <meta name="msapplication-TileImage"
+            content="/images/appicon/ms-icon-144x144.png">
+      <meta name="theme-color"
+            content="#ffffff">
+</head>
+
+<body>
+      {{ content }}
+
+      <script src="{{ 'assets/js/plugins.js' | relative_url }}"></script>
+      <script src="{{ 'assets/js/init.js' | relative_url }}"></script>
+      <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+</body>
+
 </html>

@@ -7,4 +7,4 @@ menus:
 layout: contact
 ---
 
-Please contact us for a quote on your project or any enquiry about how we can help with your business software.
+Please contact us for a quote on your project or any enquiry about how we can help with your application development.

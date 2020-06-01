@@ -5,8 +5,8 @@ excerpt: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut elementum
   purus. 
 date: '2018-01-15'
-thumb_img_path: images/4_thumb.jpg
-content_img_path: images/4.jpg
+thumb_img_path: images/stock/4_thumb.jpg
+content_img_path: images/stock/4.jpg
 layout: post
 ---
 

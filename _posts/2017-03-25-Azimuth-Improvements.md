@@ -5,7 +5,7 @@ excerpt: Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit
   accumsan sapien blandit ac amet faucibus aliquet placerat commodo.
 layout: post
 date: 2017-03-26
-thumb_img_path: images/1_thumb.jpg
+thumb_img_path: images/stock/1_thumb.jpg
 ---
 Changed the body.
 

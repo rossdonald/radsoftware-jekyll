@@ -1,3 +1,21 @@
+# generates a sitemap
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  # buildDir = "_site"
+  prettyURLs = true
+  exclude = [
+    # By file Path
+    './build-dir/path-to/file.html',
+    # By Glob pattern
+    '**/**/child-one.html'
+  ]
+
+# checks internal links are valid
+[[plugins]]
+package = "netlify-plugin-checklinks"
+
 # 301 (default): Permanent redirect.
 # 302: Temporary redirect.
 # 404: Not found
@@ -22,8 +40,6 @@
   from = "/web/CodeZone/Articles/ClipboardMonitor.aspx"
   to = "/articles/clipboardmonitor.aspx/"
   status = 301
-  # force = false
-  # query = {path = ":path"}  
 [[redirects]]
   from = "/nextgeneration/*"
   to = "/codegenerator/"

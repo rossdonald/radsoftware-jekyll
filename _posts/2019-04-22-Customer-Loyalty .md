@@ -5,8 +5,8 @@ excerpt: >-
   A story about customer loyalty curabitur sed consectetur nisi. Integer sit
   amet commodo massa.
 date: '2019-04-23'
-thumb_img_path: images/3_thumb.jpg
-content_img_path: images/3.jpg
+thumb_img_path: images/stock/3_thumb.jpg
+content_img_path: images/stock/3.jpg
 layout: post
 ---
 

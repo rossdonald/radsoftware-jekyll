@@ -7,8 +7,8 @@ excerpt: >-
   Praesent ut cursus enim, sit amet dictum turpis. Etiam justo orci, consectetur
   aliquet rhoncus sed, hendrerit vel odio.
 date: '2019-03-27'
-thumb_img_path: images/10_thumb.jpg
-content_img_path: images/10.jpg
+thumb_img_path: images/stock/10_thumb.jpg
+content_img_path: images/stock/10.jpg
 layout: post
 ---
 

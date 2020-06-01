@@ -1,45 +1,6 @@
 ---
-title: Pricing
+title: Frequently Asked Questions
 sections:
-  - section_id: pricing
-    component: pricing_block.html
-    type: pricingblock
-    bg: gray
-    title: Pricing Plans
-    subtitle: You can have a separate pricing page or list everything on the home page.
-    pricingplans:
-      - title: Basic
-        price: $5/m
-        details: |-
-          * Lorem ipsum dolor sit amet
-          * Mauris a mi tincidunt
-          * Suspendisse ut lacus
-          * Etiam eget dui a augue
-        actions:
-          - label: Order Now
-            url: /signup
-      - title: Professional
-        price: $49/m
-        details: |-
-          * Curabitur non nunc mollis
-          * Duis a purus nec ligula
-          * Pellentesque sit amet
-          * Fusce tempus mi vitae
-          * Nullam sollicitudin ante
-        highlight: true
-        actions:
-          - label: Order Now
-            url: /signup
-      - title: Enterprise
-        price: $149/m
-        details: |-
-          * Vestibulum non eros quis
-          * Aenean iaculis lorem
-          * Mauris eleifend sapien
-          * Phasellus lobortis risus
-        actions:
-          - label: Order Now
-            url: /signup
   - section_id: faq
     component: faq_block.html
     type: faqblock
@@ -51,7 +12,9 @@ sections:
         answer: >-
           Ut cursus, nunc vitae hendrerit viverra, massa ipsum congue quam, sed
           tempus mauris lacus sit amet nibh. Curabitur laoreet est maximus
-          mollis feugiat. Praesent nibh libero, placerat et justo at, luctus
+          mollis feugiat. 
+          
+          Second paragraph Praesent nibh libero, placerat et justo at, luctus
           tristique enim. Pellentesque habitant morbi tristique senectus et
           netus et malesuada fames ac turpis egestas.
       - question: Aliquam eget purus ante?
@@ -68,9 +31,9 @@ sections:
           luctus in ipsum. Nunc pellentesque mi vel dui vulputate, a lobortis
           lacus venenatis. Phasellus pellentesque dolor id feugiat faucibus.
           Etiam vehicula nunc velit, in consequat nisl feugiat nec.
-menus:
-  main:
-    weight: 3
-    title: Pricing
+# menus:
+#   main:
+#     weight: 3
+#     title: FAQ
 layout: pricing
 ---

@@ -4,8 +4,8 @@ excerpt: >-
   Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
   turpis egestas.
 date: '2019-03-10'
-thumb_img_path: images/12_thumb.jpg
-content_img_path: images/12.jpg
+thumb_img_path: images/stock/12_thumb.jpg
+content_img_path: images/stock/12.jpg
 layout: post
 ---
 

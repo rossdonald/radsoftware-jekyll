@@ -4,8 +4,8 @@ excerpt: >-
   Quisque ultrices metus sed libero ultricies condimentum. Suspendisse ut
   faucibus purus. Mauris at pharetra risus.
 date: '2018-01-09'
-thumb_img_path: images/6_thumb.jpg
-content_img_path: images/6.jpg
+thumb_img_path: images/stock/6_thumb.jpg
+content_img_path: images/stock/6.jpg
 layout: post
 ---
 

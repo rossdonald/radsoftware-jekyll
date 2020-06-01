@@ -2,10 +2,10 @@
 title: About us
 subtitle: About the company
 img_path: images/about.jpg
-menus:
-  secondary:
-    weight: 1
-    title: About Us
+# menus:
+#   secondary:
+#     weight: 1
+#     title: About Us
 layout: page
 ---
 This is the azimuth theme. You can find out more info about customizing your theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com)

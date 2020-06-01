@@ -4,89 +4,85 @@ sections:
   - section_id: hero
     component: hero_block.html
     type: heroblock
-    image: images/crane.png
+    image: images/home/web-development.png
     title: Custom Web Application Development
     content: >-
       Your business is unique, a custom developed application meets your needs without compromise.
-    actions:
-      - label: Learn More
-        url: /features
+    # actions:
+    #   - label: Services
+    #     url: /services/
   - section_id: features
     component: features_block.html
     type: featuresblock
     bg: gray
-    title: Features
+    title: Software Development Services
     subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+      We offer design, development, implementation, hosting and maintenance for your web or database application.
     featureslist:
-      - title: The Best Feature of Your Services
-        image: images/feature1.png
+      - title: Custom Web Software
+        image: images/home/custom-web-software.svg
         content: >-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed
-          aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque
-          consequat ex.
-        actions:
-          - label: Learn More
-            url: /features
-      - title: Awesome Feature of Your Services
-        image: images/feature2.png
+          A custom-developed web application can be made exactly to your business requirements. Forms, reports and business calculations are developed to meet the needs of your company and provide a software solution that works for you.
+        # actions:
+        #   - label: Services
+        #     url: /services/
+      - title: Database Development
+        image: images/home/database-design.svg
         content: >-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec
-          sapien interdum luctus. Cras rhoncus condimentum metus sit amet
-          auctor.
-        actions:
-          - label: Learn More
-            url: /features
-      - title: Cool Feature of Your Services
-        image: images/feature3.png
+          Database design and database development solutions add value to your business by storing and processing data exactly as your specifications demand.
+        # actions:
+        #   - label: Services
+        #     url: /services/
+      - title: Software Maintenance 
+        image: images/home/software-maintenance.svg
         content: >-
-          In ante enim, lobortis quis congue vel, finibus sit amet mi. Aenean
-          quis venenatis sem. Proin eget massa id metus eleifend maximus sit
-          amet nec urna.
-        actions:
-          - label: Learn More
-            url: /features
-  - section_id: reviews
-    component: reviews_block.html
-    type: reviewsblock
-    bg: white
-    title: Testimonials
-    subtitle: >-
-      Aliquam malesuada ligula eget est fringilla blandit. Integer finibus
-      semper libero id sodales.
-    reviews:
-      - author: John Doe
-        avatar: images/review1.jpg
-        content: >-
-          Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis
-          nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
-      - author: Jane Roe
-        avatar: images/review2.jpg
-        content: >-
-          Sed laoreet magna commodo libero euismod sodales. Nunc ac libero
-          convallis, interdum ligula vel, pretium diam. Integer commodo sem at
-          dui sollicitudin, vel posuere justo laoreet.
-      - author: Richard Roe
-        avatar: images/review3.jpg
-        content: >-
-          Integer consectetur purus neque, ac porttitor enim convallis vitae.
-          Interdum et malesuada fames ac ante ipsum primis in faucibus.
+          Add new features to your existing database or modify your already developed application. We can take over existing code and improve and enhance it.
+        # actions:
+        #   - label: Learn More
+        #     url: /services/
+  # - section_id: reviews
+  #   component: reviews_block.html
+  #   type: reviewsblock
+  #   bg: white
+  #   title: Testimonials
+  #   subtitle: >-
+  #     Aliquam malesuada ligula eget est fringilla blandit. Integer finibus
+  #     semper libero id sodales.
+  #   reviews:
+  #     - author: John Doe
+  #       avatar: images/stock/review1.jpg
+  #       content: >-
+  #         Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis
+  #         nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
+  #     - author: Jane Roe
+  #       avatar: images/stock/review2.jpg
+  #       content: >-
+  #         Sed laoreet magna commodo libero euismod sodales. Nunc ac libero
+  #         convallis, interdum ligula vel, pretium diam. Integer commodo sem at
+  #         dui sollicitudin, vel posuere justo laoreet.
+  #     - author: Richard Roe
+  #       avatar: images/stock/review3.jpg
+  #       content: >-
+  #         Integer consectetur purus neque, ac porttitor enim convallis vitae.
+  #         Interdum et malesuada fames ac ante ipsum primis in faucibus.
   - section_id: call-to-action
     component: cta_block.html
     type: ctablock
-    title: This Is Call To Action Block!
-    subtitle: This is an optional description for the call to action block.
+    title: How can we help?
+    subtitle: Lets talk about your software project
     actions:
       - label: Get Started
-        url: /signup
-  - section_id: recent-posts
-    component: posts_block.html
-    type: postsblock
-    bg: gray
-    title: Latest Posts
+        url: /contact/
+  # - section_id: recent-posts
+  #   component: posts_block.html
+  #   type: postsblock
+  #   bg: gray
+  #   title: Latest Posts
 menus:
   main:
+    weight: 1
+    title: Home  
+  secondary:
     weight: 1
     title: Home
 layout: home
