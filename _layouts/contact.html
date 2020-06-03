@@ -31,7 +31,7 @@ layout: body
               data-netlify="true"
               id="contactform"
               class="contact-form"
-              onsubmit="ga('send', 'event', { eventCategory: 'Contact Form', eventAction: 'Submit'});">
+              onsubmit='ga("send", "event", { eventCategory: "Contact Form", eventAction: "Submit" });'>
           <p class="screen-reader-text">
             <label>Don't fill this out if you're human: <input name="subject-field" /></label>
           </p>
@@ -58,7 +58,8 @@ layout: body
                  value="RAD-Contact-Form" />
           <p class="form-row form-submit">
             <button type="submit"
-                    class="button">Send Message</button>
+                    class="button">Send
+              Message</button>
           </p>
         </form>
         <!-- .contact-form -->
