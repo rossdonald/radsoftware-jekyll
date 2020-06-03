@@ -18,40 +18,47 @@ layout: body
       {% endif %} {% assign img_path_is_not_empty = page.img_path | is_not_empty
       %} {% if img_path_is_not_empty %}
       <div class="post-thumbnail">
-        <img src="{{ page.img_path | relative_url }}" alt="{{ page.title }}" />
+        <img src="{{ page.img_path | relative_url }}"
+             alt="{{ page.title }}" />
       </div>
       <!-- .post-thumbnail -->
       {% endif %}
       <div class="post-content">
         {{ content }}
-        <form
-          name="contact-form"
-          method="POST"
-          netlify-honeypot="subject-field"
-          data-netlify="true"
-          id="contactform"
-          class="contact-form"
-        >
+        <form name="contact-form"
+              method="POST"
+              netlify-honeypot="subject-field"
+              data-netlify="true"
+              id="contactform"
+              class="contact-form"
+              onsubmit="ga('send', 'event', { eventCategory: 'Contact Form', eventAction: 'Submit'});">
           <p class="screen-reader-text">
-            <label
-              >Don't fill this out if you're human: <input name="subject-field"
-            /></label>
+            <label>Don't fill this out if you're human: <input name="subject-field" /></label>
           </p>
           <p class="form-row">
             <label class="form-label">Name</label>
-            <input type="text" name="name" class="form-input" />
+            <input type="text"
+                   name="name"
+                   class="form-input" />
           </p>
           <p class="form-row">
             <label class="form-label">Email address</label>
-            <input type="email" name="email" class="form-input" />
+            <input type="email"
+                   name="email"
+                   class="form-input" />
           </p>
           <p class="form-row">
             <label class="form-label">Message</label>
-            <textarea name="message" class="form-textarea" rows="7"></textarea>
+            <textarea name="message"
+                      class="form-textarea"
+                      rows="7"></textarea>
           </p>
-          <input type="hidden" name="form-name" value="RAD-Contact-Form" />
+          <input type="hidden"
+                 name="form-name"
+                 value="RAD-Contact-Form" />
           <p class="form-row form-submit">
-            <button type="submit" class="button">Send Message</button>
+            <button type="submit"
+                    class="button">Send Message</button>
           </p>
         </form>
         <!-- .contact-form -->
