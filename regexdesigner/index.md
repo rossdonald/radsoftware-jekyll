@@ -50,7 +50,7 @@ layout: page
 
 <p>
   <a href="./Rad.RegexDesigner.Setup.1.4.exe"
-  onClick="ga('send', 'event', { eventCategory: 'RegexDesigner', eventAction: 'Download', eventLabel: 'Rad.RegexDesigner.Setup.1.4.exe'});">
+  onClick="gtag('event', 'Download', { 'event_category': 'RegexDesigner', 'event_label': 'Rad.RegexDesigner.Setup.1.4.exe' });">
    Download Rad Software Regular Expression Designer v1.4</a
   >
   (~209 KB)

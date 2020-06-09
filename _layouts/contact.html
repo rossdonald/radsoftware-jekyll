@@ -31,7 +31,7 @@ layout: body
               data-netlify="true"
               id="contactform"
               class="contact-form"
-              onsubmit='ga("send", "event", { eventCategory: "Contact Form", eventAction: "Submit" });'>
+              onsubmit='gtag("event", "Submit", { "event_category": "Form", "event_label": "Contact Form" });'>
           <p class="screen-reader-text">
             <label>Don't fill this out if you're human: <input name="subject-field" /></label>
           </p>
