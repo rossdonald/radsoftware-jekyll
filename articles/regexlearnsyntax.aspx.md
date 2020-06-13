@@ -36,7 +36,7 @@ layout: post
 <p>
   When learning Regular Expressions, it helps to have a tool that you can use to
   test Regex patterns. Rad Software has a
-  <strong><a href="../regexdesigner/"> Free Regular Expression Tool</a></strong>
+  <strong><a href="../../regexdesigner/"> Free Regular Expression Tool</a></strong>
   available for download that will help as you go through the article.
 </p>
 <h2>The basics - Finding text</h2>
@@ -353,7 +353,7 @@ Jones
 
 <p>
   To learn more about Regular Expression syntax see the next article:
-  <a href="regexsyntaxadvanced.aspx/">
+  <a href="../regexsyntaxadvanced.aspx/">
     C# Regular Expression (Regex) Examples in .NET</a
   >
 </p>

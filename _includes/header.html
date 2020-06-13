@@ -11,14 +11,14 @@
             <img src="{{ site.header.logo_img | relative_url }}"
                  alt="Logo" />
           </a>
-        </p><!-- .site-logo -->
+        </p>
         {% endif %}
         {% if page.layout == 'home' or page.layout == 'blog' %}
         <h1 class="site-title"><a href='{{ '/' | relative_url }}'>{{ site.header.title }}</a></h1>
         {% else %}
         <p class="site-title"><a href='{{ '/' | relative_url }}'>{{ site.header.title }}</a></p>
         {% endif %}
-      </div><!-- .site-branding -->
+      </div>
 
       {% if site.menus.main and site.header.has_nav %}
       <nav id="main-navigation"
@@ -43,14 +43,14 @@
             </li>
             {% endfor %}
             {% endif %}
-          </ul><!-- .menu -->
-        </div><!-- .site-nav-inside -->
-      </nav><!-- .site-navigation -->
+          </ul>
+        </div>
+      </nav>
       <button id="menu-open"
               class="menu-toggle"><span class="screen-reader-text">Close Menu</span><span class="icon-menu"
               aria-hidden="true"></span></button>
       {% endif %}
 
-    </div><!-- .site-header-inside -->
-  </div><!-- .inner -->
-</header><!-- .site-header -->
+    </div>
+  </div>
+</header>

@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Custom Software Development, Sydney
 sections:
   - section_id: hero
     component: hero_block.html

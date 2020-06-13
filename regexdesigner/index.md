@@ -1,6 +1,10 @@
 ---
 title: Regular Expression (Regex) Design and Test Tool for .NET
 layout: page
+menus:
+  secondary:
+    weight: 4
+    title: RegexDesigner
 ---
 
 <p>

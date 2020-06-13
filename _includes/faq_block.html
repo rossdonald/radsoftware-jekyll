@@ -1,4 +1,5 @@
-<section id="{{ include.section.section_id }}" class="block faq-block bg-{{ include.section.bg }} outer">
+<section id="{{ include.section.section_id }}"
+         class="block faq-block bg-{{ include.section.bg }} outer">
   <div class="inner-small">
     <div class="block-header">
       <h2 class="block-title">{{ include.section.title }}</h2>
@@ -8,7 +9,7 @@
         {{ include.section.subtitle }}
       </p>
       {% endif %}
-    </div><!-- .block-header -->
+    </div>
     {% assign faqitems_is_not_empty = include.section.faqitems | is_not_empty %}
     {% if faqitems_is_not_empty %}
     <dl class="faq-accordion">
@@ -25,7 +26,7 @@
         </div>
       </dd>
       {% endfor %}
-    </dl><!-- .faq-accordion -->
+    </dl>
     {% endif %}
-  </div><!-- .inner-small -->
-</section><!-- .block -->
+  </div>
+</section>

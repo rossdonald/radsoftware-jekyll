@@ -1,4 +1,5 @@
-<footer id="colophon" class="site-footer">
+<footer id="colophon"
+        class="site-footer">
   <div class="footer-top outer">
     <div class="inner">
       <div class="footer-widgets">
@@ -7,7 +8,8 @@
           {% assign logo_img_is_not_empty = site.footer.logo_img | is_not_empty %}
           {% if logo_img_is_not_empty %}
           <p class="site-logo">
-            <a href='{{ '/' | relative_url }}'><img src="{{ site.footer.logo_img | relative_url }}" alt="Logo" /></a>
+            <a href='{{ '/' | relative_url }}'><img src="{{ site.footer.logo_img | relative_url }}"
+                   alt="Logo" /></a>
           </p>
           {% else %}
           <p class="site-title">
@@ -20,7 +22,7 @@
             {{ site.footer.tagline }}
           </p>
           {% endif %}
-        </div><!-- .widget -->
+        </div>
 
         {% if site.menus.secondary and site.footer.has_nav or site.footer.has_social %}
         <nav class="widget footer-navigation">
@@ -35,17 +37,17 @@
                 </li>
                 {% endfor %}
               </ul>
-            </div><!-- .secondary-nav -->
+            </div>
             {% endif %}
             {% assign has_social_is_not_empty = site.footer.has_social | is_not_empty %}
             {% if has_social_is_not_empty %}
             <div class="social-nav">
               <h2 class="widget-title">{{ site.footer.social_title }}</h2>
               {% include social.html %}
-            </div><!-- .social-nav -->
+            </div>
             {% endif %}
-          </div><!-- .footer-nav-inside -->
-        </nav><!-- .widget -->
+          </div>
+        </nav>
         {% endif %}
         {% assign has_subscribe_is_not_empty = site.footer.has_subscribe | is_not_empty %}
         {% if has_subscribe_is_not_empty %}
@@ -56,20 +58,23 @@
           <p>{{ site.footer.subscribe_content }}</p>
           {% endif %}
           {% include subscribe_form.html %}
-        </div><!-- .widget -->
+        </div>
         {% endif %}
-      </div><!-- .footer-widgets -->
-    </div><!-- .inner -->
-  </div><!-- .outer -->
+      </div>
+    </div>
+  </div>
 
   <div class="site-info outer">
     <div class="inner">
       {{ site.footer.content }}
       &nbsp;
       {% for link in site.footer.links %}
-      <a href="{{ link.url }}" {% assign new_window_is_not_empty = link.new_window | is_not_empty %}{% if new_window_is_not_empty %}target="_blank" rel="noopener" {% endif %}>{{ link.text }}</a>.
+      <a href="{{ link.url }}"
+         {% assign new_window_is_not_empty = link.new_window | is_not_empty %}{% if new_window_is_not_empty %}target="_blank"
+         rel="noopener"
+         {% endif %}>{{ link.text }}</a>.
       {% endfor %}
-    </div><!-- .inner -->
-  </div><!-- .site-info -->
+    </div>
+  </div>
 
-</footer><!-- .site-footer -->
+</footer>
