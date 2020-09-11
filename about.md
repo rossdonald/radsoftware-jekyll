@@ -1,7 +1,7 @@
 ---
 title: About us
 subtitle: About the company
-img_path: images/about.jpg
+img_path: images/stock/about.jpg
 # menus:
 #   secondary:
 #     weight: 1
@@ -21,6 +21,8 @@ This is the azimuth theme. You can find out more info about customizing your the
 You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+
+Link to md file [Services]({% link services.md %})
 
 ```c#
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)

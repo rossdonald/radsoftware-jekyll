@@ -43,11 +43,11 @@ layout: post
 >
   <tr>
     <td>
-      <img src="../images/download.gif" align="absmiddle" />
+      <img src="/articles/images/download.gif" align="absmiddle" />
     </td>
     <td>
       C# Source Code:
-      <a href="../RAD_ClipboardMonitorExampleSrc.zip">
+      <a href="/articles/RAD_ClipboardMonitorExampleSrc.zip">
         RAD_ClipboardMonitorExampleSrc.zip</a
       >
       (~50 KB)
@@ -55,11 +55,11 @@ layout: post
   </tr>
   <tr>
     <td>
-      <img src="../images/download.gif" align="absmiddle" />
+      <img src="/articles/images/download.gif" align="absmiddle" />
     </td>
     <td>
       VB.NET Example:
-      <a target="_blank" href="../ClipboardMonitor_VB.txt">
+      <a target="_blank" href="/articles/ClipboardMonitor_VB.txt">
         ClipboardMonitor_VB.txt</a
       >
     </td>

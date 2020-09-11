@@ -57,9 +57,9 @@ layout: post
 <h2>Download</h2>
 
 <p>
-  <a href="../CLRconfigSchema.zip">
+  <a href="/articles/CLRconfigSchema.zip">
     <img
-      src="../images/download.gif"
+      src="/articles/images/download.gif"
       align="absmiddle"
       alt="download"
     />CLRconfigSchema.zip</a
@@ -100,7 +100,7 @@ C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml<
     <b> targetSchema</b> property<br />
     <br />
     <img
-      src="../images/app-config-intellisense.gif"
+      src="/articles/images/app-config-intellisense.gif"
       width="457"
       height="235"
     /><br />
@@ -109,7 +109,7 @@ C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml<
   <li>
     Edit <b>Web.config</b> or <b>App.config<br /> </b><br />
     <img
-      src="../images/web-config-intellisense.gif"
+      src="/articles/images/web-config-intellisense.gif"
       width="385"
       height="139"
     /><br />
@@ -121,7 +121,7 @@ C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml<
     your <code> Web.config</code> file!<br />
     <br />
     <img
-      src="../images/visual-studio-intellisense.gif"
+      src="/articles/images/visual-studio-intellisense.gif"
       width="682"
       height="199"
     />

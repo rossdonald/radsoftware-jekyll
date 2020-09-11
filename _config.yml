@@ -4,7 +4,7 @@ baseurl: /
 permalink: "/:title/"
 collections:
   posts:
-    permalink: "/posts/:title/"
+    permalink: "/blog/:title/"
 palette: blue
 header:
   title: RAD SOFTWARE

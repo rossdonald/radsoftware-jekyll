@@ -33,6 +33,10 @@ package = "netlify-plugin-checklinks"
   to = "/"
   status = 404
 [[redirects]]
+  from = "/web/Products/RegexDesigner/"
+  to = "/regexdesigner/"
+  status = 301  
+[[redirects]]
   from = "/web/Products/RegexDesigner/Default.aspx"
   to = "/regexdesigner/"
   status = 301

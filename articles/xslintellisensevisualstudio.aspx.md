@@ -19,7 +19,7 @@ layout: post
 </P>
 <P>
   <a href="XslSchema.zip">
-    <img src="../images/download.gif" align="absmiddle" />XslSchema.zip</a
+    <img src="/articles/images/download.gif" align="absmiddle" />XslSchema.zip</a
   >
   (~10 KB)
 </P>
@@ -49,11 +49,11 @@ C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Packages\schemas\xml<
 
 <h2>What does it look like?</h2>
 <p>
-  <IMG src="../images/XslSchema_Shot1.gif" /><br />
+  <IMG src="/articles/images/XslSchema_Shot1.gif" /><br />
   Screenshot 1
 </p>
 <P
-  ><IMG src="../images/XslSchema_Shot2.gif" /><br />
+  ><IMG src="/articles/images/XslSchema_Shot2.gif" /><br />
   Screenshot 2
 </P>
 
