@@ -47,17 +47,17 @@ menus:
 
 <p>
   The Regular Expression Designer is requires the .NET Framework to be installed
-  before it will run. The .NET Framework can be downloaded for free from
+  before it will run. The .NET Framework is pre-installed on Windows or can be downloaded from
   Microsoft.
 </p>
 <h2>Download</h2>
 
 <p>
-  <a href="./Rad.RegexDesigner.Setup.1.4.exe"
-  onClick="gtag('event', 'Download', { 'event_category': 'RegexDesigner', 'event_label': 'Rad.RegexDesigner.Setup.1.4.exe' });">
-   Download Rad Software Regular Expression Designer v1.4</a
+  <a href="./Rad.RegexDesigner.Setup.1.5.exe"
+  onClick="gtag('event', 'Download', { 'event_category': 'RegexDesigner', 'event_label': 'Rad.RegexDesigner.Setup.1.5.exe' });">
+   Download Rad Software Regular Expression Designer v1.5</a
   >
-  (~209 KB)
+  (~222 KB)
 </p>
 <p>
   &nbsp;
@@ -88,8 +88,12 @@ make a donation please use this PayPal button.<br />
 <br />
 The Regex Designer is free and there is no obligation to donate :-)
 <p></p>
-<h2>Updated to Version 1.4</h2>
+<h2>Updated to Version 1.5</h2>
+<p>
+  The changes include: now requires .NET Framework 4
+</p>
 
+<h2>Updated to Version 1.4</h2>
 <p>
   The Regular Expression Designer has been updated to v1.4. The changes include:
 </p>
